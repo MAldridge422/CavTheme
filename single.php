@@ -9,9 +9,7 @@
         <div <?php post_class() ?>>
           <h1 class="posttitle"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h1>
           <?php the_content('');?>
-          <ul class="meta">
-            <li>Posted <?php the_time('F jS, Y') ?></li>
-          </ul>
+          <p>Posted <?php the_time('F jS, Y') ?></p>
         </div>
         <?php endwhile; ?>
         <?php endif; ?>

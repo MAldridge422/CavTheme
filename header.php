@@ -16,7 +16,7 @@
   <body>
     <div class="centeredcontainer">
       <div class="header">
-        <a href="/wordpresstest/index.php"><img src="<?php bloginfo('template_url'); ?>/images/cover.png" alt="Cover" id="headerCover"></a>
+        <a href="/index.php"><img src="<?php bloginfo('template_url'); ?>/images/cover.png" alt="Cover" id="headerCover"></a>
         <div class="navbar">
           <div class="menu">
 <?php generate_menu(); ?>
