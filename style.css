@@ -144,7 +144,7 @@ html {
       color: #FFFFFF;
       text-decoration: none;
       font-family: "Yeseva One", cursive;
-      font-size: 27px;
+      font-size: 1.7em;
       margin: 0; }
   /* line 100, sass/style.scss */
   .menu a:hover, .menu p:hover {
@@ -254,7 +254,7 @@ html {
   .teamSummary p {
     color: #FFFFFF;
     font-family: "Yeseva One", cursive;
-    font-size: 27px;
+    font-size: 1.7em;
     margin: 0;
     padding: 15px 0 10px 0; }
 
@@ -271,13 +271,13 @@ html {
     /* line 230, sass/style.scss */
     .threecolumnlayout a h1 {
       font-family: "Yeseva One", cursive;
-      font-size: 20px;
+      font-size: 1.3em;
       text-align: left;
       color: #000000; }
     /* line 236, sass/style.scss */
     .threecolumnlayout a p {
       font-family: "Open Sans", sans-serif;
-      font-size: 14px;
+      font-size: 0.9em;
       text-align: left;
       color: #000000; }
 
@@ -332,13 +332,13 @@ html {
   padding: 10px;
   color: #FFFFFF;
   font-family: "Open Sans", sans-serif;
-  font-size: 14px;
+  font-size: 0.9em;
   overflow: hidden; }
   /* line 299, sass/style.scss */
   .posts h1 {
     color: #FF671F;
     font-family: "Yeseva One", cursive;
-    font-size: 30px; }
+    font-size: 1.7em; }
     /* line 303, sass/style.scss */
     .posts h1 a {
       text-decoration: none;
@@ -347,7 +347,7 @@ html {
   .posts h2 {
     color: #FFFFFF;
     font-family: "Open Sans", sans-serif;
-    font-size: 20px;
+    font-size: 1.3em;
     padding: 5px 0; }
   /* line 316, sass/style.scss */
   .posts a {
@@ -373,7 +373,7 @@ html {
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
   font-family: "Open Sans", sans-serif;
-  font-size: 14px;
+  font-size: 0.9em;
   padding: 0;
   margin: 0; }
   /* line 347, sass/style.scss */

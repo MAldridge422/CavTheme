@@ -92,7 +92,7 @@ html {
       color: $primaryColor3;
       text-decoration: none;
       font-family: $primaryFont;
-      font-size: 27px;
+      font-size: 1.7em;
       margin: 0;
     }
   }
@@ -211,7 +211,7 @@ html {
   p {
     color: $primaryColor3;
     font-family: $primaryFont;
-    font-size: 27px;
+    font-size: 1.7em;
     margin: 0;
     padding: 15px 0 10px 0;
   }
@@ -229,13 +229,13 @@ html {
     
     h1 {
       font-family: $primaryFont;
-      font-size: 20px;
+      font-size: 1.3em;
       text-align: left;
       color: #000000;
     }
     p {
       font-family: $secondaryFont;
-      font-size: 14px;
+      font-size: 0.9em;
       text-align: left;
       color: #000000;
     }
@@ -293,13 +293,13 @@ html {
   padding: 10px;
   color: $primaryColor3;
   font-family: $secondaryFont;
-  font-size: 14px;
+  font-size: 0.9em;
   overflow: hidden;
 
   h1 {
     color: $primaryColor2;
     font-family: $primaryFont;
-    font-size: 30px;
+    font-size: 1.7em;
     a {
       text-decoration: none;
       color: $primaryColor2;
@@ -309,7 +309,7 @@ html {
   h2 {
     color: $primaryColor3;
     font-family: $secondaryFont;
-    font-size: 20px;
+    font-size: 1.3em;
     padding: 5px 0;
   }
 
@@ -340,7 +340,7 @@ html {
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
   font-family: $secondaryFont;
-  font-size: 14px;
+  font-size: 0.9em;
   padding: 0;
   margin: 0;
 
