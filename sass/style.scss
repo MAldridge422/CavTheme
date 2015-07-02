@@ -30,6 +30,13 @@ html {
     padding: 0;
   }
 
+  a, a:visited {
+    color: $primaryColor2;
+  }
+
+  a:hover {
+    color: $secondaryColor2;
+  }
 }
 
 .centeredcontainer {
@@ -311,10 +318,6 @@ html {
     font-family: $secondaryFont;
     font-size: 1.3em;
     padding: 5px 0;
-  }
-
-  a {
-    text-decoration: none;
   }
 
   ul {
