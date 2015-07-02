@@ -1,0 +1,7 @@
+# This document defines what items go in the social media navigation menu
+# Each line is Title, Location, Image Location, Target (optional)
+# There is no support for submenus
+# Lines that start with a "#" will be commented out
+# To use a "#" as the first character of a Title, use &num instead
+# Example: Facebook, httphttps://www.facebook.com/virginiafirst, /images/FBlogo.png
+Facebook, https://www.facebook.com/frc422, /images/FBlogo.png

@@ -1,0 +1,20 @@
+# This document defines what items go in the main navigation menu
+# Each line is Title, Location, Target (optional)
+# To make a sub-menu, use a "{" as the Location
+# Put a "}" on a line after a sub-menu's items have been listed
+# Lines that start with a "#" will be commented out
+# To use a "#" as the first character of a Title, use &num instead
+Home, /wordpresstest/index.php
+About, {
+  Our Team, /wordpresstest/our-team/
+  FIRST, /wordpresstest/first/
+  Our Robots, /wordpresstest/our-robots/
+}
+Sponsors, /wordpresstest/sponsors/
+Resources, {
+  Forms, /wordpresstest/forms/
+  Branding, /wordpresstest/branding/
+  GitHub, https://github.com/619Code/, _blank
+}
+Blog, /wordpresstest/archive/
+Contact Us, /wordpresstest/contact-us/

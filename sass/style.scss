@@ -1,0 +1,377 @@
+/*
+Theme Name: CavTheme
+Theme URI: http://carobotics.org
+Description: Theme for Cavalier Robotics
+Version: 1
+Author: Cavalier Robotics
+Author URI: http://carobotics.org
+*/
+
+@import "compass";
+@import "compass/reset";
+
+//Partials
+@import "partials/_variables";
+
+/* Body and Centered Container */
+html {
+  background: -webkit-linear-gradient($primaryColor1, $secondaryColor1, $primaryColor1); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient($primaryColor1, $secondaryColor1, $primaryColor1); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient($primaryColor1, $secondaryColor1, $primaryColor1); /* For Firefox 3.6 to 15 */
+  background: linear-gradient($primaryColor1, $secondaryColor1, $primaryColor1); /* Standard syntax */
+  background-attachment:fixed;
+  
+  p, h1 {
+    line-height: 120%;
+    padding-top: 10px;
+  }
+
+  h1, h2 {
+    padding: 0;
+  }
+
+}
+
+.centeredcontainer {
+  color: #000000;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+/* Header and Navigation Bar */
+.header {
+  height: 200px;
+  width: 100%;
+  position: relative;
+
+  p {
+    line-height: 100%;
+    padding-top: 0;
+  }
+}
+
+#headerCover {
+  width: 95%;
+  position: absolute;
+  bottom: 45px;
+  left: 0;
+}
+
+.navbar {
+  background-color: $primaryColor2;
+  width: 85%;
+  height: 35%;
+  border-radius: 10px 10px 0 0;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.menu {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+
+  ul {
+    list-style-type: none;
+    padding: 0 3px;
+    display: inline-block;
+    margin: 0;
+  }
+
+  li {
+    position:relative;
+    float: left;
+    display: block;
+    padding: 15px 20px;
+
+    a, p {
+      color: $primaryColor3;
+      text-decoration: none;
+      font-family: $primaryFont;
+      font-size: 27px;
+      margin: 0;
+    }
+  }
+
+  a:hover, p:hover {
+    color: $primaryColor1;
+  }
+
+  ul li ul {
+    background-color: $primaryColor2;
+    position: absolute;
+    left: 0px;
+    z-index: 1;
+    display:none;
+    padding: 0 15px 10px 15px;
+    width: 170px;
+    border-radius: 0 0 10px 10px;
+  }
+
+  ul li ul li {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    padding: 10px 0 0 5px;
+    float: left;
+  }
+}
+
+.socialmedia {
+  background-color: $primaryColor2;
+  width: 15%;
+  height: 35px;
+  border-radius: 10px 0 0 0;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  ul {
+    float: left;
+    height: 35px;
+    padding: 5px;
+    margin: 0;
+    list-style-type: none;
+
+    li, a {
+      margin: 0;
+      padding: 0;
+     float: left;
+    }
+  }
+  
+  img {
+    display: inline;
+    width: 25px;
+    padding: 0 6px 6px 0;
+  }
+}
+
+/* Slider */
+.slider {
+  position: relative;
+  top: 0;
+  width: 100%;
+  height: 550px;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+#slide1 {
+  position: relative;
+  bottom: 170px;
+}
+
+#slide2 {
+  position: relative;
+  bottom: 120px;
+}
+
+#slide3 {
+  position: relative;
+  bottom: 100px;
+}
+
+#slide4 {
+  position: relative;
+  bottom: 60px;
+}
+
+.slide {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+
+  img {
+    width: 100%;
+  }
+}
+
+.active-slide {
+  display: block;
+  margin: 0;
+}
+
+/* Team Summary */
+.teamSummary {
+  padding: 0 10px 10px 10px;
+  text-align: center;
+  background-color: $primaryColor2;
+  margin: 0;
+
+  p {
+    color: $primaryColor3;
+    font-family: $primaryFont;
+    font-size: 27px;
+    margin: 0;
+    padding: 15px 0 10px 0;
+  }
+}
+
+/* 3 Column Layout */
+.threecolumnlayout {
+  background-color: $primaryColor3;
+  margin: 0;
+  padding: 20px 0;
+  text-align: center;
+
+  a {
+    text-decoration: none;
+    
+    h1 {
+      font-family: $primaryFont;
+      font-size: 20px;
+      text-align: left;
+      color: #000000;
+    }
+    p {
+      font-family: $secondaryFont;
+      font-size: 14px;
+      text-align: left;
+      color: #000000;
+    }
+  }
+}
+
+.column {
+  margin: 0;
+  text-align: center;
+}
+
+.column#center {
+  margin: 0px;
+  width: 30%;
+  display: inline-block;
+}
+
+.column#left {
+  padding-left: 20px;
+  float: left;
+  width: 30%;
+}
+
+.column#right {
+  float: right;
+  width: 30%;
+  padding-right: 20px;
+}
+
+.columnimage {
+  text-align: center;
+  background-color: $primaryColor3;
+  height: 270px;
+
+  img {
+    padding: 10px;
+    width: 80%;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+.columntext {
+  background-color: $primaryColor3;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  height: 100px;
+}
+
+/* Posts */
+.posts {
+  background-color: $secondaryColor3;
+  padding: 10px;
+  color: $primaryColor3;
+  font-family: $secondaryFont;
+  font-size: 14px;
+  overflow: hidden;
+
+  h1 {
+    color: $primaryColor2;
+    font-family: $primaryFont;
+    font-size: 30px;
+    a {
+      text-decoration: none;
+      color: $primaryColor2;
+    }
+  }
+
+  h2 {
+    color: $primaryColor3;
+    font-family: $secondaryFont;
+    font-size: 20px;
+    padding: 5px 0;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  ul {
+    list-style-type: none;
+    padding: 0 0 0 50px;
+    margin: 0;
+  }
+
+  p {
+    padding: 10px 0 0 50px;
+  }
+
+  img {
+    padding: 5px;
+  }
+}
+
+/* Footer */
+.footer {
+  background-color: $primaryColor2;
+  text-align: center;
+  width: 100%;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  font-family: $secondaryFont;
+  font-size: 14px;
+  padding: 0;
+  margin: 0;
+
+  p {
+    padding: 5px;
+    margin: 0;
+  }
+}
+
+/* Misc */
+.floatR {
+  float:right;
+}
+
+.rounded {
+  border-radius: 10px;
+}
+
+.aligncenter {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.alignleft {
+  float: left;
+}
+
+.alignright {
+  float: right;
+}
+
+.overflowauto {
+  overflow: auto;
+}

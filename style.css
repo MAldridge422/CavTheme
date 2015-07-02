@@ -1,0 +1,408 @@
+/*
+Theme Name: CavTheme
+Theme URI: http://carobotics.org
+Description: Theme for Cavalier Robotics
+Version: 1
+Author: Cavalier Robotics
+Author URI: http://carobotics.org
+*/
+/* line 5, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline; }
+
+/* line 22, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1; }
+
+/* line 24, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none; }
+
+/* line 26, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* line 28, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle; }
+
+/* line 30, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none; }
+  /* line 103, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+  q:before, q:after, blockquote:before, blockquote:after {
+    content: "";
+    content: none; }
+
+/* line 32, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none; }
+
+/* line 116, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block; }
+
+/*Colors*/
+/* Not used as of 6/17/15 */
+/*Fonts*/
+/* Body and Centered Container */
+/* line 17, sass/style.scss */
+html {
+  background: -webkit-linear-gradient(#041E42, #003366, #041E42);
+  /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(#041E42, #003366, #041E42);
+  /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(#041E42, #003366, #041E42);
+  /* For Firefox 3.6 to 15 */
+  background: linear-gradient(#041e42, #003366, #041e42);
+  /* Standard syntax */
+  background-attachment: fixed; }
+  /* line 24, sass/style.scss */
+  html p, html h1 {
+    line-height: 120%;
+    padding-top: 10px; }
+  /* line 29, sass/style.scss */
+  html h1, html h2 {
+    padding: 0; }
+
+/* line 35, sass/style.scss */
+.centeredcontainer {
+  color: #000000;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0; }
+
+/* Header and Navigation Bar */
+/* line 43, sass/style.scss */
+.header {
+  height: 200px;
+  width: 100%;
+  position: relative; }
+  /* line 48, sass/style.scss */
+  .header p {
+    line-height: 100%;
+    padding-top: 0; }
+
+/* line 54, sass/style.scss */
+#headerCover {
+  width: 95%;
+  position: absolute;
+  bottom: 45px;
+  left: 0; }
+
+/* line 61, sass/style.scss */
+.navbar {
+  background-color: #FF671F;
+  width: 85%;
+  height: 35%;
+  border-radius: 10px 10px 0 0;
+  position: absolute;
+  bottom: 0;
+  right: 0; }
+
+/* line 71, sass/style.scss */
+.menu {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  text-align: center; }
+  /* line 78, sass/style.scss */
+  .menu ul {
+    list-style-type: none;
+    padding: 0 3px;
+    display: inline-block;
+    margin: 0; }
+  /* line 85, sass/style.scss */
+  .menu li {
+    position: relative;
+    float: left;
+    display: block;
+    padding: 15px 20px; }
+    /* line 91, sass/style.scss */
+    .menu li a, .menu li p {
+      color: #FFFFFF;
+      text-decoration: none;
+      font-family: "Yeseva One", cursive;
+      font-size: 27px;
+      margin: 0; }
+  /* line 100, sass/style.scss */
+  .menu a:hover, .menu p:hover {
+    color: #041E42; }
+  /* line 104, sass/style.scss */
+  .menu ul li ul {
+    background-color: #FF671F;
+    position: absolute;
+    left: 0px;
+    z-index: 1;
+    display: none;
+    padding: 0 15px 10px 15px;
+    width: 170px;
+    border-radius: 0 0 10px 10px; }
+  /* line 115, sass/style.scss */
+  .menu ul li ul li {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    padding: 10px 0 0 5px;
+    float: left; }
+
+/* line 124, sass/style.scss */
+.socialmedia {
+  background-color: #FF671F;
+  width: 15%;
+  height: 35px;
+  border-radius: 10px 0 0 0;
+  position: absolute;
+  bottom: 0;
+  left: 0; }
+  /* line 133, sass/style.scss */
+  .socialmedia ul {
+    float: left;
+    height: 35px;
+    padding: 5px;
+    margin: 0;
+    list-style-type: none; }
+    /* line 140, sass/style.scss */
+    .socialmedia ul li, .socialmedia ul a {
+      margin: 0;
+      padding: 0;
+      float: left; }
+  /* line 147, sass/style.scss */
+  .socialmedia img {
+    display: inline;
+    width: 25px;
+    padding: 0 6px 6px 0; }
+
+/* Slider */
+/* line 155, sass/style.scss */
+.slider {
+  position: relative;
+  top: 0;
+  width: 100%;
+  height: 550px;
+  overflow: hidden;
+  margin: 0;
+  padding: 0; }
+
+/* line 165, sass/style.scss */
+#slide1 {
+  position: relative;
+  bottom: 170px; }
+
+/* line 170, sass/style.scss */
+#slide2 {
+  position: relative;
+  bottom: 120px; }
+
+/* line 175, sass/style.scss */
+#slide3 {
+  position: relative;
+  bottom: 100px; }
+
+/* line 180, sass/style.scss */
+#slide4 {
+  position: relative;
+  bottom: 60px; }
+
+/* line 185, sass/style.scss */
+.slide {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0; }
+  /* line 194, sass/style.scss */
+  .slide img {
+    width: 100%; }
+
+/* line 199, sass/style.scss */
+.active-slide {
+  display: block;
+  margin: 0; }
+
+/* Team Summary */
+/* line 205, sass/style.scss */
+.teamSummary {
+  padding: 0 10px 10px 10px;
+  text-align: center;
+  background-color: #FF671F;
+  margin: 0; }
+  /* line 211, sass/style.scss */
+  .teamSummary p {
+    color: #FFFFFF;
+    font-family: "Yeseva One", cursive;
+    font-size: 27px;
+    margin: 0;
+    padding: 15px 0 10px 0; }
+
+/* 3 Column Layout */
+/* line 221, sass/style.scss */
+.threecolumnlayout {
+  background-color: #FFFFFF;
+  margin: 0;
+  padding: 20px 0;
+  text-align: center; }
+  /* line 227, sass/style.scss */
+  .threecolumnlayout a {
+    text-decoration: none; }
+    /* line 230, sass/style.scss */
+    .threecolumnlayout a h1 {
+      font-family: "Yeseva One", cursive;
+      font-size: 20px;
+      text-align: left;
+      color: #000000; }
+    /* line 236, sass/style.scss */
+    .threecolumnlayout a p {
+      font-family: "Open Sans", sans-serif;
+      font-size: 14px;
+      text-align: left;
+      color: #000000; }
+
+/* line 245, sass/style.scss */
+.column {
+  margin: 0;
+  text-align: center; }
+
+/* line 250, sass/style.scss */
+.column#center {
+  margin: 0px;
+  width: 30%;
+  display: inline-block; }
+
+/* line 256, sass/style.scss */
+.column#left {
+  padding-left: 20px;
+  float: left;
+  width: 30%; }
+
+/* line 262, sass/style.scss */
+.column#right {
+  float: right;
+  width: 30%;
+  padding-right: 20px; }
+
+/* line 268, sass/style.scss */
+.columnimage {
+  text-align: center;
+  background-color: #FFFFFF;
+  height: 270px; }
+  /* line 273, sass/style.scss */
+  .columnimage img {
+    padding: 10px;
+    width: 80%;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%); }
+
+/* line 282, sass/style.scss */
+.columntext {
+  background-color: #FFFFFF;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  height: 100px; }
+
+/* Posts */
+/* line 291, sass/style.scss */
+.posts {
+  background-color: #505759;
+  padding: 10px;
+  color: #FFFFFF;
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  overflow: hidden; }
+  /* line 299, sass/style.scss */
+  .posts h1 {
+    color: #FF671F;
+    font-family: "Yeseva One", cursive;
+    font-size: 30px; }
+    /* line 303, sass/style.scss */
+    .posts h1 a {
+      text-decoration: none;
+      color: #FF671F; }
+  /* line 309, sass/style.scss */
+  .posts h2 {
+    color: #FFFFFF;
+    font-family: "Open Sans", sans-serif;
+    font-size: 20px;
+    padding: 5px 0; }
+  /* line 316, sass/style.scss */
+  .posts a {
+    text-decoration: none; }
+  /* line 320, sass/style.scss */
+  .posts ul {
+    list-style-type: none;
+    padding: 0 0 0 50px;
+    margin: 0; }
+  /* line 326, sass/style.scss */
+  .posts p {
+    padding: 10px 0 0 50px; }
+  /* line 330, sass/style.scss */
+  .posts img {
+    padding: 5px; }
+
+/* Footer */
+/* line 336, sass/style.scss */
+.footer {
+  background-color: #FF671F;
+  text-align: center;
+  width: 100%;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  padding: 0;
+  margin: 0; }
+  /* line 347, sass/style.scss */
+  .footer p {
+    padding: 5px;
+    margin: 0; }
+
+/* Misc */
+/* line 354, sass/style.scss */
+.floatR {
+  float: right; }
+
+/* line 358, sass/style.scss */
+.rounded {
+  border-radius: 10px; }
+
+/* line 362, sass/style.scss */
+.aligncenter {
+  margin-left: auto;
+  margin-right: auto; }
+
+/* line 367, sass/style.scss */
+.alignleft {
+  float: left; }
+
+/* line 371, sass/style.scss */
+.alignright {
+  float: right; }
+
+/* line 375, sass/style.scss */
+.overflowauto {
+  overflow: auto; }
