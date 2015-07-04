@@ -6,7 +6,6 @@ Version: 1
 Author: Cavalier Robotics
 Author URI: http://carobotics.org
 */
-/* line 5, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -27,38 +26,30 @@ time, mark, audio, video {
   font-size: 100%;
   vertical-align: baseline; }
 
-/* line 22, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 html {
   line-height: 1; }
 
-/* line 24, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 ol, ul {
   list-style: none; }
 
-/* line 26, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0; }
 
-/* line 28, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 caption, th, td {
   text-align: left;
   font-weight: normal;
   vertical-align: middle; }
 
-/* line 30, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 q, blockquote {
   quotes: none; }
-  /* line 103, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
   q:before, q:after, blockquote:before, blockquote:after {
     content: "";
     content: none; }
 
-/* line 32, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 a img {
   border: none; }
 
-/* line 116, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
   display: block; }
 
@@ -66,7 +57,6 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 /* Not used as of 6/17/15 */
 /*Fonts*/
 /* Body and Centered Container */
-/* line 17, sass/style.scss */
 html {
   background: -webkit-linear-gradient(#041E42, #003366, #041E42);
   /* For Safari 5.1 to 6.0 */
@@ -77,21 +67,16 @@ html {
   background: linear-gradient(#041e42, #003366, #041e42);
   /* Standard syntax */
   background-attachment: fixed; }
-  /* line 24, sass/style.scss */
   html p, html h1 {
     line-height: 120%;
     padding-top: 10px; }
-  /* line 29, sass/style.scss */
   html h1, html h2 {
     padding: 0; }
-  /* line 33, sass/style.scss */
   html a, html a:visited {
     color: #FF671F; }
-  /* line 37, sass/style.scss */
   html a:hover {
     color: #FFB25B; }
 
-/* line 42, sass/style.scss */
 .centeredcontainer {
   color: #000000;
   max-width: 1100px;
@@ -99,24 +84,20 @@ html {
   padding: 0; }
 
 /* Header and Navigation Bar */
-/* line 50, sass/style.scss */
 .header {
   height: 200px;
   width: 100%;
   position: relative; }
-  /* line 55, sass/style.scss */
   .header p {
     line-height: 100%;
     padding-top: 0; }
 
-/* line 61, sass/style.scss */
 #headerCover {
   width: 95%;
   position: absolute;
   bottom: 45px;
   left: 0; }
 
-/* line 68, sass/style.scss */
 .navbar {
   background-color: #FF671F;
   width: 85%;
@@ -126,36 +107,30 @@ html {
   bottom: 0;
   right: 0; }
 
-/* line 78, sass/style.scss */
 .menu {
   margin: 0;
   padding: 0;
   height: 100%;
   width: 100%;
   text-align: center; }
-  /* line 85, sass/style.scss */
   .menu ul {
     list-style-type: none;
     padding: 0 3px;
     display: inline-block;
     margin: 0; }
-  /* line 92, sass/style.scss */
   .menu li {
     position: relative;
     float: left;
     display: block;
     padding: 15px 20px; }
-    /* line 98, sass/style.scss */
     .menu li a, .menu li p {
       color: #FFFFFF;
       text-decoration: none;
       font-family: "Yeseva One", cursive;
       font-size: 1.7em;
       margin: 0; }
-  /* line 107, sass/style.scss */
   .menu a:hover, .menu p:hover {
     color: #041E42; }
-  /* line 111, sass/style.scss */
   .menu ul li ul {
     background-color: #FF671F;
     position: absolute;
@@ -165,7 +140,6 @@ html {
     padding: 0 15px 10px 15px;
     width: 190px;
     border-radius: 0 0 10px 10px; }
-  /* line 122, sass/style.scss */
   .menu ul li ul li {
     position: relative;
     display: block;
@@ -173,7 +147,6 @@ html {
     padding: 10px 0 0 20px;
     float: left; }
 
-/* line 131, sass/style.scss */
 .socialmedia {
   background-color: #FF671F;
   width: 15%;
@@ -182,26 +155,22 @@ html {
   position: absolute;
   bottom: 0;
   left: 0; }
-  /* line 140, sass/style.scss */
   .socialmedia ul {
     float: left;
     height: 35px;
     padding: 5px;
     margin: 0;
     list-style-type: none; }
-    /* line 147, sass/style.scss */
     .socialmedia ul li, .socialmedia ul a {
       margin: 0;
       padding: 0;
       float: left; }
-  /* line 154, sass/style.scss */
   .socialmedia img {
     display: inline;
     width: 25px;
     padding: 0 6px 6px 0; }
 
 /* Slider */
-/* line 162, sass/style.scss */
 .slider {
   position: relative;
   top: 0;
@@ -211,27 +180,22 @@ html {
   margin: 0;
   padding: 0; }
 
-/* line 172, sass/style.scss */
 #slide1 {
   position: relative;
   bottom: 170px; }
 
-/* line 177, sass/style.scss */
 #slide2 {
   position: relative;
   bottom: 120px; }
 
-/* line 182, sass/style.scss */
 #slide3 {
   position: relative;
   bottom: 100px; }
 
-/* line 187, sass/style.scss */
 #slide4 {
   position: relative;
   bottom: 60px; }
 
-/* line 192, sass/style.scss */
 .slide {
   display: none;
   position: absolute;
@@ -240,23 +204,19 @@ html {
   width: 100%;
   height: 100%;
   margin: 0; }
-  /* line 201, sass/style.scss */
   .slide img {
     width: 100%; }
 
-/* line 206, sass/style.scss */
 .active-slide {
   display: block;
   margin: 0; }
 
 /* Team Summary */
-/* line 212, sass/style.scss */
 .teamSummary {
   padding: 0 10px 10px 10px;
   text-align: center;
   background-color: #FF671F;
   margin: 0; }
-  /* line 218, sass/style.scss */
   .teamSummary p {
     color: #FFFFFF;
     font-family: "Open Sans", sans-serif;
@@ -265,57 +225,47 @@ html {
     padding: 15px 0 10px 0; }
 
 /* 3 Column Layout */
-/* line 228, sass/style.scss */
 .threecolumnlayout {
   background-color: #FFFFFF;
   margin: 0;
   padding: 20px 0;
   text-align: center; }
-  /* line 234, sass/style.scss */
   .threecolumnlayout a {
     text-decoration: none; }
-    /* line 237, sass/style.scss */
     .threecolumnlayout a h1 {
       font-family: "Yeseva One", cursive;
       font-size: 1.3em;
       text-align: left;
       color: #000000; }
-    /* line 243, sass/style.scss */
     .threecolumnlayout a p {
       font-family: "Open Sans", sans-serif;
       font-size: 0.9em;
       text-align: left;
       color: #000000; }
 
-/* line 252, sass/style.scss */
 .column {
   margin: 0;
   text-align: center; }
 
-/* line 257, sass/style.scss */
 .column#center {
   margin: 0px;
   width: 30%;
   display: inline-block; }
 
-/* line 263, sass/style.scss */
 .column#left {
   padding-left: 20px;
   float: left;
   width: 30%; }
 
-/* line 269, sass/style.scss */
 .column#right {
   float: right;
   width: 30%;
   padding-right: 20px; }
 
-/* line 275, sass/style.scss */
 .columnimage {
   text-align: center;
   background-color: #FFFFFF;
   height: 270px; }
-  /* line 280, sass/style.scss */
   .columnimage img {
     padding: 10px;
     width: 80%;
@@ -323,7 +273,6 @@ html {
     top: 50%;
     transform: translateY(-50%); }
 
-/* line 289, sass/style.scss */
 .columntext {
   background-color: #FFFFFF;
   width: 80%;
@@ -332,7 +281,6 @@ html {
   height: 100px; }
 
 /* Posts */
-/* line 298, sass/style.scss */
 .posts {
   background-color: #505759;
   padding: 10px;
@@ -340,35 +288,28 @@ html {
   font-family: "Open Sans", sans-serif;
   font-size: 0.9em;
   overflow: hidden; }
-  /* line 306, sass/style.scss */
   .posts h1 {
     color: #FF671F;
     font-family: "Yeseva One", cursive;
     font-size: 1.7em; }
-    /* line 310, sass/style.scss */
     .posts h1 a {
       text-decoration: none;
       color: #FF671F; }
-  /* line 316, sass/style.scss */
   .posts h2 {
     color: #FFFFFF;
     font-family: "Open Sans", sans-serif;
     font-size: 1.3em;
     padding: 5px 0; }
-  /* line 323, sass/style.scss */
   .posts ul {
     list-style-type: none;
     padding: 0 0 0 50px;
     margin: 0; }
-  /* line 329, sass/style.scss */
   .posts p {
     padding: 10px 0 0 50px; }
-  /* line 333, sass/style.scss */
   .posts img {
     padding: 5px; }
 
 /* Footer */
-/* line 339, sass/style.scss */
 .footer {
   background-color: #FF671F;
   text-align: center;
@@ -379,33 +320,26 @@ html {
   font-size: 0.9em;
   padding: 0;
   margin: 0; }
-  /* line 350, sass/style.scss */
   .footer p {
     padding: 5px;
     margin: 0; }
 
 /* Misc */
-/* line 357, sass/style.scss */
 .floatR {
   float: right; }
 
-/* line 361, sass/style.scss */
 .rounded {
   border-radius: 10px; }
 
-/* line 365, sass/style.scss */
 .aligncenter {
   margin-left: auto;
   margin-right: auto; }
 
-/* line 370, sass/style.scss */
 .alignleft {
   float: left; }
 
-/* line 374, sass/style.scss */
 .alignright {
   float: right; }
 
-/* line 378, sass/style.scss */
 .overflowauto {
   overflow: auto; }
