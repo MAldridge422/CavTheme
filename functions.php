@@ -1,4 +1,8 @@
 <?php
+/* 
+ * THIS FUNCTION CREATES THE MAIN MENU USING /CUSTOMIZE/MENU.TXT
+ *
+ */
 function generate_menu() {
   echo "            <ul>\n";
   $url = get_bloginfo('template_url')."/customize/menu.txt";
@@ -34,6 +38,11 @@ function generate_menu() {
   fclose($file);
   echo "            </ul>\n";
 }
+
+/* 
+ * THIS FUNCTION CREATES THE SOCIAL MEDIA MENU USING /CUSTOMIZE/MENU.TXT
+ *
+ */
 function generate_socialmedia() {
   echo "          <ul>\n";
   $url = get_bloginfo('template_url')."/customize/socialmedia.txt";
