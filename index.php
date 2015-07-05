@@ -30,15 +30,13 @@
                <p>Reach out to Team 619 through email or social media!</p>
              </div>
            </a></div>
-           <div class="column" id="center"><a href="http://www.virginiafirst.org/" target="_blank">
-             <div class="columnimage">
-               <img src="<?php bloginfo('template_url'); ?>/images/VAFIRST.jpg" alt="Virginia FIRST" />
-             </div>
+           <div class="column" id="center">
+<iframe src="http://rcm-na.amazon-adsystem.com/e/cm?t=charloalbemar-20&o=1&p=12&l=ur1&category=giftcardsnonamazon&banner=12FF4M1CP3H5WZMCHC82&f=ifr&linkID=F5DIF4R3WOZHKECF" width="300" height="250" scrolling="no" border="0" marginwidth="0" style="border:none;" frameborder="0"></iframe>
              <div class="columntext">
-               <h1>VirginiaFIRST</h1>
-               <p>Our state-wide FIRST affiliate.</p>
+               <h1>Amazon</h1>
+               <p>Support us by clicking on the above link before placing an order on Amazon</p>
              </div>
-           </a></div>
+           </div>
            <div class="column" id="right"><a href="http://www.usfirst.org/" target="_blank">
              <div class="columnimage">
                <img src="<?php bloginfo('template_url'); ?>/images/FIRST.png" alt="FIRST" />
