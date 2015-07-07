@@ -19,10 +19,10 @@
         <a href="/index.php"><img src="<?php bloginfo('template_url'); ?>/images/cover.png" alt="Cover" id="headerCover"></a>
         <div class="navbar">
           <div class="menu">
-<?php generate_menu(); ?>
+<?php ct_generate_menu(); ?>
           </div> <!--end menu-->
         </div> <!--end navbar-->
         <div class="socialmedia">
-<?php generate_socialmedia(); ?>
+<?php ct_generate_socialmedia(); ?>
         </div> <!--end socialmedia-->
       </div> <!--end header-->

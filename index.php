@@ -30,13 +30,15 @@
                <p>Reach out to Team 619 through email or social media!</p>
              </div>
            </a></div>
-           <div class="column" id="center">
+           <div class="column" id="center"><a href="http://www.amazon.com/b//ref=as_sl_pc_tf_lc?node=2238192011&tag=charloalbemar-20&camp=217361&creative=401093&linkCode=ur1&adid=0GCRTZ7BKA999JWVJT7G&&ref-refURL=http%3A%2F%2Frcm-na.amazon-adsystem.com%2Fe%2Fcm%3Ft%3Dcharloalbemar-20%26o%3D1%26p%3D12%26l%3Dur1%26category%3Dgiftcardsnonamazon%26banner%3D12FF4M1CP3H5WZMCHC82%26f%3Difr%26linkID%3DF5DIF4R3WOZHKECF" target="_blank">
+<div class="columnimage">
 <iframe src="http://rcm-na.amazon-adsystem.com/e/cm?t=charloalbemar-20&o=1&p=12&l=ur1&category=giftcardsnonamazon&banner=12FF4M1CP3H5WZMCHC82&f=ifr&linkID=F5DIF4R3WOZHKECF" width="300" height="250" scrolling="no" border="0" marginwidth="0" style="border:none;" frameborder="0"></iframe>
+</div>
              <div class="columntext">
                <h1>Amazon</h1>
-               <p>Support us by clicking on the above link before placing an order on Amazon</p>
+               <p>Support us by clicking on the link before placing an order on Amazon</p>
              </div>
-           </div>
+           </a></div>
            <div class="column" id="right"><a href="http://www.usfirst.org/" target="_blank">
              <div class="columnimage">
                <img src="<?php bloginfo('template_url'); ?>/images/FIRST.png" alt="FIRST" />
@@ -47,18 +49,7 @@
              </div>
            </a></div>
       </div>
-      <!--posts-->
-      <div class="posts">
-        <?php $counter = 0; ?>
-        <?php if (have_posts()) : ?>
-        <?php while ((have_posts()) && $counter < 3) : the_post(); ?>
-        <div <?php post_class() ?>>
-          <h1 class="posttitle"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h1>
-          <?php the_content('');?>
-          <p>Posted <?php the_time('F jS, Y') ?></p>
-        </div>
-<?php $counter++; ?>
-<?php endwhile; ?>
-<?php endif; ?>
-      </div>
+
+<?php ct_get_posts(3, "      "); ?>
+
 <?php get_footer(); ?>

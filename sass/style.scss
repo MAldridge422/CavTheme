@@ -265,7 +265,10 @@ html {
     background-color: $primaryColor3;
     height: 270px;
   }
-
+  
+  p {
+    text-decoration: underline;
+  }
 }
 
 .column#left {
