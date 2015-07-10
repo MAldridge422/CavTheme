@@ -60,7 +60,7 @@ function ct_generate_socialmedia() {
   }
   echo "          </ul>\n";
 }
-?>
+
 /*
  * THIS FUNCTION FINDS AND PRINTS MULTIPLE POSTS IN INDEX.PHP, ARCHIVE.PHP, ETC
  *
