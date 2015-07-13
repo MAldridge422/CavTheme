@@ -17,7 +17,7 @@ var main = function() {
       $( ".submenu", this ).slideDown();
     },
     function () {
-      $( ".submenu", this ).slideUp();
+      $( ".submenu", this ).stop(true, true).slideUp();
     }
   );
 }
