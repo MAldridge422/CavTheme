@@ -11,7 +11,11 @@ Author URI: http://carobotics.org
 @import "compass/reset";
 
 //Partials
-@import "partials/_variables";
+@import "partials/_variables"; 
+
+//Header padding
+$hpad_t: 14px;
+$hpad_b: 8px;
 
 /* Body and Centered Container */
 html {
@@ -27,7 +31,7 @@ html {
   }
 
   h1, h2 {
-    padding: 0;
+    padding: $hpad_t 0 $hpad_b 0;
   }
 
   a, a:visited {
@@ -326,13 +330,29 @@ html {
   font-size: 0.9em;
   overflow: hidden;
 
+  .meta {
+    font-size: 0.90em;
+    top: 0;
+    p {
+      padding: 0;
+      color: $secondaryColor2;
+    }
+  }
+
   h1 {
     color: $primaryColor2;
     font-family: $primaryFont;
     font-size: 1.7em;
+    padding: $hpad_t 0 0 0;
+    + * {
+      padding: 0 0 $hpad_b 0;
+    }
     a {
       text-decoration: none;
       color: $primaryColor2;
+    }
+    .underline {
+        text-decoration: underline;
     }
   }
 
@@ -347,14 +367,6 @@ html {
     list-style-type: none;
     padding: 0 0 0 50px;
     margin: 0;
-  }
-
-  p {
-    padding: 10px 0 0 50px;
-  }
-
-  img {
-    padding: 5px;
   }
 }
 

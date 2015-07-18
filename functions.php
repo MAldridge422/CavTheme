@@ -1,4 +1,5 @@
 <?php
+/* MENU FUNCTIONS */
 /* 
  * THIS FUNCTION CREATES THE MAIN MENU USING /CUSTOMIZE/MENU.TXT
  *
@@ -61,6 +62,7 @@ function ct_generate_socialmedia() {
   echo "          </ul>\n";
 }
 
+/* POST FUNCTIONS */
 /*
  * THIS FUNCTION FINDS AND PRINTS MULTIPLE POSTS IN INDEX.PHP, ARCHIVE.PHP, ETC
  *
@@ -74,7 +76,7 @@ function ct_generate_socialmedia() {
  */
 function ct_get_posts ($count = 3, $indent = '    ', $author_can = 'administrator', $current_user_can = '', $adminposts = true, $time = true) {
   query_posts('post_type=post'); //Allows "The Loop" to work
-  echo $indent."<!--posts-->\n";
+  echo $indent."<!--Posts-->\n";
   echo $indent."<div class='posts'>\n";
   $counter = 0;
   if (have_posts()) {
@@ -86,10 +88,12 @@ function ct_get_posts ($count = 3, $indent = '    ', $author_can = 'administrato
           post_class();
           echo " >\n";
           echo $indent."    <h1 class='posttitle'><a href='".get_the_permalink()."'>".get_the_title()."</a></h1>\n";
-          echo $indent."    "; the_content('');
           if($time == true) {
-            echo $indent."    <p>Posted ".get_the_time('F jS, Y')."</p>";
+            echo $indent."  <div class='meta'>";
+            echo $indent."    <p>".get_the_time('F jS, Y')."</p>";
+            echo $indent."  </div>";
           }
+          echo $indent."    "; the_content('');
           echo "\n".$indent."  </div>\n";
           $counter++;
         }
@@ -100,10 +104,12 @@ function ct_get_posts ($count = 3, $indent = '    ', $author_can = 'administrato
           post_class();
           echo " >\n";
           echo $indent."    <h1 class='posttitle'><a href='".get_the_permalink()."'>".get_the_title()."</a></h1>\n";
-          echo $indent."    "; the_content('');
           if($time == true) {
-            echo $indent."    <p>Posted ".get_the_time('F jS, Y')."</p>";
+            echo $indent."  <div class='meta'>";
+            echo $indent."    <p>".get_the_time('F jS, Y')."</p>";
+            echo $indent."  </div>";
           }
+          echo $indent."    "; the_content('');
           echo "\n".$indent."  </div>\n";
           $counter++;
         }
@@ -121,7 +127,7 @@ function ct_get_posts ($count = 3, $indent = '    ', $author_can = 'administrato
  *
  */
 function ct_get_a_post($indent = '    ', $time = true) {
-  echo $indent."<!--posts-->\n";
+  echo $indent."<!--Posts-->\n";
   echo $indent."<div class='posts'>\n";
   if (have_posts()) {
     while (have_posts()) {
@@ -131,18 +137,22 @@ function ct_get_a_post($indent = '    ', $time = true) {
         post_class();
         echo ">\n";
         echo $indent."    <h1 class='posttitle'><a href='".get_the_permalink()."'>".get_the_title()."</a></h1>\n";
-          echo $indent."    "; the_content('');
           if($time == true) {
-            echo $indent."    <p>Posted ".get_the_time('F jS, Y')."</p>";
+            echo $indent."  <div class='meta'>";
+            echo $indent."    <p>".get_the_time('F jS, Y')."</p>";
+            echo $indent."  </div>";
           }
+          echo $indent."    "; the_content('');
           echo "\n".$indent."  </div>\n";
       } else {
-        echo "<h1 class='error'> 404 ERROR page not found! </h1>";
+        $redirect = set_url_scheme( 'http://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'] );
+        $login_url = wp_login_url($redirect, true);
+        echo "      <h1>Please <a class='underline' href='".$login_url."'>log in</a> to view this post.</h1>";
         break;
       }
     }
   }
-  echo $indent."</div>";
+  echo "\n".$indent."</div> <!--end posts-->";
 }
 
 ?>
