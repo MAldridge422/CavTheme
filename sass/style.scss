@@ -276,10 +276,11 @@ html, body {
     p {
       margin-right: 0.75em;
       margin-top: 0;
+      float: left;
     }
 
-    p.date {
-      float: left;
+    p:last-of-type {
+      float: none;
     }
 
     p.date:before, p.comments:before {

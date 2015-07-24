@@ -130,7 +130,7 @@ function ct_get_posts ($params) {
         if($params['meta']['date'] == true) {
           echo $params['indent']."      <p class='date'>".get_the_time('F jS, Y')."</p>\n";
         }
-	if($params['meta']['comments'] == true) {
+	if($params['meta']['comments'] == true && author_can(get_post(), "administrator") == false) {
           echo $params['indent']."      <p class='comments'>".get_comments_number()." Comments</p>\n";
         }
         echo $params['indent']."    </div>\n".$params['indent']."    ";
@@ -187,7 +187,7 @@ function ct_get_a_post($params) {
         if($params['meta']['date'] == true) {
           echo $params['indent']."      <p class='date'>".get_the_time('F jS, Y')."</p>\n";
         }
-	if($params['meta']['comments'] == true) {
+	if($params['meta']['comments'] == true && author_can(get_post(), "administrator") == false) {
           echo $params['indent']."      <p class='comments'>".get_comments_number()." Comments</p>\n";
         }
         echo $params['indent']."    </div>\n".$params['indent']."    ";
