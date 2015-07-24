@@ -17,7 +17,7 @@
       </div>
       <!-- Team Summary -->
       <div class="teamSummary">
-        <p>Cavalier Robotics is a high school robotics team from Central Virginia.</p>
+        <p>Team 619 is a high school robotics team from Central Virginia.</p>
       </div>
       <!--3 Column Layout-->
       <div class="threecolumnlayout">
