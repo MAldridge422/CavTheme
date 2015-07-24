@@ -50,6 +50,11 @@
            </a></div>
       </div>
 
-<?php ct_get_posts(3, "      "); ?>
+<?php
+ct_get_posts(array(
+  'count' => 3,
+  'indent' => "      "
+));
+?>
 
 <?php get_footer(); ?>

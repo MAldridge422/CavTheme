@@ -1,5 +1,13 @@
-<?php get_header(); ?>
+<?php
+get_header();
 
-<?php ct_get_a_post(); ?>
+ct_get_a_post(array(
+  'indent' => '    ',
+  'meta' => array(
+    'date' => false,
+    'comments' => false
+  )
+));
 
-<?php get_footer(); ?>
+get_footer();
+?>
