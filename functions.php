@@ -132,6 +132,16 @@ function ct_get_posts ($params) {
         }
 	if($params['meta']['comments'] == true && author_can(get_post(), "administrator") == false) {
           echo $params['indent']."      <p class='comments'>".get_comments_number()." Comments</p>\n";
+          if(get_comments_number() > 0) {
+            $lastCommentDate = get_comment_date("F jS, Y", get_comments(get_post())[0]->comment_ID);
+            $today = date_i18n("F jS, Y");
+            if($today == $lastCommentDate) {
+              $lastCommentDate = "at ".get_comment_date("h:i a", get_comments(get_post())[0]->comment_ID);
+            } else {
+              $lastCommentDate = "on ".$lastCommentDate;
+            }
+            echo $params['indent']."      <p class='lastcomment'>Last comment posted ".$lastCommentDate."</p>";
+          }
         }
         echo $params['indent']."    </div>\n".$params['indent']."    ";
         the_content('');
@@ -193,6 +203,9 @@ function ct_get_a_post($params) {
         echo $params['indent']."    </div>\n".$params['indent']."    ";
         the_content('');
         echo $params['indent']."  </div>\n";
+        if(author_can(get_post(), "administrator") == false) {
+          comments_template();
+        }
       } else {
         $redirect = set_url_scheme( 'http://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'] );
         $login_url = wp_login_url($redirect, true);
@@ -204,6 +217,50 @@ function ct_get_a_post($params) {
   echo "\n".$params['indent']."</div> <!--end posts-->";
 }
 
+/* LOGIN PAGE FUNCTIONS */
+/* 
+ * THIS FUNCTION ADDS A CUSTOM STYLESHEET TO THE LOGIN SCREEN
+ * A CUSTOM JS FILE CAN BE ADDED BY ADDED THE FOLLOWING LINE:
+ *     wp_enqueue_script( 'custom-login', get_template_directory_uri() . '/style-login.js' );
+ *
+ */
+function my_login_stylesheet() {
+    wp_enqueue_style( 'custom-login', get_template_directory_uri() . '/style-login.css' );
+}
+add_action( 'login_enqueue_scripts', 'my_login_stylesheet' );
+
+/* 
+ * THIS FUNCTION ADDS A CUSTOM LOGO TO THE LOGIN SCREEN
+ *
+ */
+function my_login_logo() { ?>
+    <style type="text/css">
+        .login h1 a {
+            background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/images/Logo.png);
+            padding-bottom: 30px;
+        }
+    </style>
+<?php }
+add_action( 'login_enqueue_scripts', 'my_login_logo' );
+
+/* 
+ * THIS FUNCTION MAKES THE LOGO LINK TO INDEX.PHP
+ *
+ */
+function my_login_logo_url() {
+    return home_url();
+}
+add_filter( 'login_headerurl', 'my_login_logo_url' );
+
+/* 
+ * THIS FUNCTION MAKES THE LOGO TITLE THE SAME AS THE SITE TITLE
+ *
+ */
+function my_login_logo_url_title() {
+    return get_bloginfo('name');
+}
+add_filter( 'login_headertitle', 'my_login_logo_url_title' );
+
 /* OTHER FUNCTIONS */
 /* 
  * THIS FUNCTION MAKES DASHICONS USABLE
@@ -213,4 +270,74 @@ add_action( 'wp_enqueue_scripts', 'themename_scripts' );
 function themename_scripts() {
     wp_enqueue_style( 'themename-style', get_stylesheet_uri(), array( 'dashicons' ), '1.0' );
 }
+
+/*
+ * THIS FUNCTION CUSTOMIZES COMMENTS
+ *
+ *
+ */
+function ct_comment( $comment, $args, $depth ) {
+  $GLOBALS['comment'] = $comment;
+  $comment_ID = get_comment_ID();
+ 
+  extract($args, EXTR_SKIP);
+  echo "          <li>\n            ";
+  echo get_avatar($comment, 64);
+  echo "\n            <div id='meta'>\n";
+  echo "              <p id='author'>".get_comment_author()."</p>\n";
+  echo "              <p class='meta' id='time'>".get_comment_date()." at ".get_comment_time()."</p>\n";
+  echo "            </div><!--end meta-->\n";
+  /* Obtain and manipulate comment */
+  $comment_text = get_comment_text( $comment_ID , $args );
+  $content = apply_filters( 'comment_text', $comment_text, $comment, $args );
+
+  //Display images
+  while(strpos($content, "~~")) {
+    $start = strpos($content, "~~") + 2;
+    $end = strpos($content, "~~", $start);
+    $url = substr($content, $start, $end-($start));
+
+    if(filter_var($url, FILTER_VALIDATE_URL)) {
+      if ($size = getimagesize($url)) {
+        $width = $size[0];
+        if ($width > 500) {
+          $width = "70%";
+        }
+        $content = str_replace("~~$url~~", "<img src='$url' width=$width/>", $content);
+      } else {
+        $content = str_replace("~~$url~~", "[ERROR: Invalid Image URL]", $content);
+      }
+    } else {
+      $content = str_replace("~~$url~~", "[ERROR: Invalid Image URL]", $content);
+    }
+  }
+
+  //Display links
+  while(strpos($content, "[[")) {
+    $start = strpos($content, "[[") + 2;
+    $end = strpos($content, "]]", $start);
+    $url = substr($content, $start, $end-($start));
+
+    if(filter_var($url, FILTER_VALIDATE_URL)) {
+      $content = str_replace("[[$url]]", "<a href='$url'>$url</a>", $content);
+    } else {
+      $content = str_replace("[[$url]]", "[ERROR: Invalid link URL]", $content);
+    }
+  }
+
+  echo $content;
+
+  echo "          ";
+}
+
+/*
+ * THIS FUNCTION CUSTOMIZES THE END OF COMMENTS
+ *
+ * 
+ */
+function ct_comment_end() {
+  echo "</li>";
+  echo "<div id='commentbreak'></div>";
+}
+
 ?>

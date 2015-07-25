@@ -1,0 +1,47 @@
+@import "compass";
+@import "compass/reset";
+
+//Partials
+@import "partials/_variables";
+@import "compass/css3/box-shadow";
+
+.login {
+  background: -webkit-linear-gradient($primaryColor1, $secondaryColor1, $primaryColor1); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient($primaryColor1, $secondaryColor1, $primaryColor1); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient($primaryColor1, $secondaryColor1, $primaryColor1); /* For Firefox 3.6 to 15 */
+  background: linear-gradient($primaryColor1, $secondaryColor1, $primaryColor1); /* Standard syntax */
+  background-attachment:fixed;
+  font-family: $primaryFont;
+
+  h1 a {
+    height: 200px;
+    width: 100%;
+    background-size: auto 100%;
+  }
+
+  #loginform {
+    background: $primaryColor3;
+    
+    p label, input {
+      color: $primaryColor1;
+      font-family: $primaryFont;
+      font-size: 1.0em;
+    }
+
+    p.forgetmenot, p.submit input#wp-submit {
+      font-size: 0.8em;
+    }
+
+    p.submit input#wp-submit {
+      background: $primaryColor2;
+      border-color: $secondaryColor2;
+      color: $primaryColor3;
+    }
+  }
+
+  div#login p#backtoblog a, div#login p#nav a {
+    color: $primaryColor2;
+    font-family: $primaryFont;
+    font-size: 1.0em;
+  }
+}

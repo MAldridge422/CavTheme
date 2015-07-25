@@ -4,7 +4,6 @@
 # Put a "}" on a line after a sub-menu's items have been listed
 # Lines that start with a "#" will be commented out
 # To use a "#" as the first character of a Title, use &num instead
-Home, /index.php
 About, {
   Our Team, /our-team/
   FIRST, /first/
@@ -18,3 +17,4 @@ Resources, {
 }
 Blog, /archive/
 Contact Us, /contact-us/
+Members, /members/

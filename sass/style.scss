@@ -283,7 +283,7 @@ html, body {
       float: none;
     }
 
-    p.date:before, p.comments:before {
+    p.date:before, p.comments:before, p.lastcomment:before {
       font-family: "dashicons";
     }
 
@@ -293,6 +293,10 @@ html, body {
 
     p.comments:before {
       content: "\f125" + " ";
+    }
+
+    p.lastcomment:before {
+      content: "\f469" + " ";
     }
   }
 
@@ -318,6 +322,11 @@ html, body {
 
   h1:first-of-type {
     margin-top: 10px;
+  }
+
+  h2 {
+    color: $primaryColor2;
+    margin: 0.5em 0;
   }
 }
 
@@ -397,5 +406,77 @@ html, body {
         padding-bottom: 0;
       }
     }
+  }
+}
+
+.comments {
+  li {
+    clear: both;
+
+    #meta {
+      display: block;
+
+      p {
+        margin-top: 10px;
+        margin-bottom: 0;
+        width: auto;
+      }
+
+      #author {
+        float: left;
+        color: $primaryColor2;
+      }
+
+      #time {
+        float: right;
+      }
+    }
+
+    p {
+      float: right;
+      width: 90%;
+    }
+  }
+
+  .avatar {
+    float: left;
+    padding: 10px 10px 10px 0;
+  }
+
+  #respond {
+    clear: both;
+    text-align: center;
+
+    textarea {
+      font-family: $primaryFont;
+    }
+
+    .commentsubmit {
+      margin: 0 auto;
+      margin-top: 0.5em;
+      display: block;
+      background: $primaryColor2;
+      border-color: $secondaryColor2;
+      border-style: solid;
+      border-width: 1px;
+      color: #fff;
+      font-family: $primaryFont;
+      height: 30px;
+      box-shadow: 0 1px 0 rgba(120, 200, 230, 0.5) inset, 0 1px 0 rgba(0, 0, 0, 0.15);
+      @include border-radius(3px 3px 3px 3px, 3px 3px 3px 3px); /* Compass's border-radius mixin */
+    }
+  }
+
+  #commentbreak {
+    margin: 0 auto;
+    clear: both;
+    width: 85%;
+    height: 5px;
+    background: -webkit-linear-gradient($primaryColor1, $secondaryColor1, $primaryColor1); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient($primaryColor1, $secondaryColor1, $primaryColor1); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient($primaryColor1, $secondaryColor1, $primaryColor1); /* For Firefox 3.6 to 15 */
+    background: linear-gradient($primaryColor1, $secondaryColor1, $primaryColor1); /* Standard syntax */
+    background-attachment:fixed;
+    @include border-radius(1em 1em 1em 1em, 1em 1em 1em 1em); /* Compass's border-radius mixin */
   }
 }
