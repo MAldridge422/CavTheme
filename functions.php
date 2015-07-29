@@ -340,4 +340,79 @@ function ct_comment_end() {
   echo "<div id='commentbreak'></div>";
 }
 
+function ct_get_discussion ($params) {
+
+  //Set default parameter values if null or invalid input
+  if(!array_key_exists('count', $params) || !is_int($params['count'])) {
+    $params['count'] = 3;
+  }
+  if(!array_key_exists('indent', $params) || !is_string($params['indent'])) {
+    $params['indent'] = '    ';
+  }
+  if(!array_key_exists('author_can', $params) || !is_string($params['author_can'])) {
+    $params['author_can'] = 'administrator';
+  }
+  if(!array_key_exists('current_user_can', $params) || !is_string($params['current_user_can'])) {
+    $params['current_user_can'] = '';
+  }
+  if(!array_key_exists('show_admin_posts', $params) || !is_bool($params['show_admin_posts'])) {
+    $params['show_admin_posts'] = true;
+  }
+  if(!array_key_exists('meta', $params) || !is_array($params['meta'])) {
+    $params['meta'] = array(
+      'date' => true,
+      'comments' => true
+    );
+  } else {
+    if(!array_key_exists('date', $params['meta']) || !is_bool($params['meta']['date'])) {
+      $params['meta']['date'] = true;
+    }
+    if(!array_key_exists('comments', $params['meta']) || !is_bool($params['meta']['comments'])) {
+      $params['meta']['comments'] = true;
+    }
+  }
+
+  query_posts('post_type=post'); // Allows "The Loop" to work
+  $counter = 0;
+  if (have_posts()) {
+    while ((have_posts()) && $counter < $params['count']) {
+      the_post();
+      if(
+        (author_can(get_post(), $params['author_can']) || $params['author_can'] == "")
+        &&
+        (current_user_can($params['current_user_can']) || $params['current_user_can'] == "")
+        &&
+        ($params['show_admin_posts'] == true || author_can(get_post(), "administrator") == false)
+      ) {
+        echo $params['indent']."  <div ";
+        post_class();
+        echo " >\n";
+        echo $params['indent']."    <h2 class='posttitle'><a href='".get_the_permalink()."'>".get_the_title()."</a></h2>\n";
+        echo $params['indent']."    <div class='meta'>\n";
+        if($params['meta']['date'] == true) {
+          echo $params['indent']."      <p class='date'>".get_the_time('F jS, Y')."</p>\n";
+        }
+	if($params['meta']['comments'] == true && author_can(get_post(), "administrator") == false) {
+          echo $params['indent']."      <p class='comments'>".get_comments_number()." Comments</p>\n";
+          if(get_comments_number() > 0) {
+            $lastCommentDate = get_comment_date("F jS, Y", get_comments(get_post())[0]->comment_ID);
+            $today = date_i18n("F jS, Y");
+            if($today == $lastCommentDate) {
+              $lastCommentDate = "at ".get_comment_date("h:i a", get_comments(get_post())[0]->comment_ID);
+            } else {
+              $lastCommentDate = "on ".$lastCommentDate;
+            }
+            echo $params['indent']."      <p class='lastcomment'>Last comment posted ".$lastCommentDate."</p>";
+          }
+        }
+        echo $params['indent']."    </div>\n".$params['indent']."    ";
+        the_content('');
+        echo $params['indent']."  </div>\n";
+        $counter++;
+      }
+    }
+  }
+}
+
+
 ?>

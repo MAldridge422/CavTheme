@@ -4,7 +4,7 @@
     <title><?php wp_title('-', true, 'right'); ?> <?php bloginfo('name'); ?></title>
     <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>">
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,400italic,600' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Yeseva+One' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Dosis:500' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Droid+Sans+Mono' rel='stylesheet' type='text/css'>
     <link rel="icon" type="image/png" href="<?php bloginfo('template_url'); ?>/images/favicon.ico">
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>

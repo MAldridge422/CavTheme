@@ -20,6 +20,30 @@ var main = function() {
       $( ".submenu", this ).stop(true, true).slideUp();
     }
   );
+
+  $("#menu_discussion").click(function() {
+    $('html, body').animate({
+      scrollTop: $("#discussion").offset().top - 81
+    }, 1000);
+  });
+
+  $("#menu_calendar").click(function() {
+    $('html, body').animate({
+      scrollTop: $("#calendar").offset().top - 81
+    }, 2000);
+  });
+  $("#menu_fundraising").click(function() {
+    $('html, body').animate({
+      scrollTop: $("#fundraising").offset().top - 81
+    }, 1000);
+  });
+
+  $("#menu_outreach").click(function() {
+    $('html, body').animate({
+      scrollTop: $("#outreach").offset().top - 81
+    }, 2000);
+  });
+
 }
 
 $(document).ready(main);

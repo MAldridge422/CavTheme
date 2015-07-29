@@ -1,0 +1,415 @@
+/*
+Theme Name: CavTheme
+Theme URI: http://carobotics.org
+Description: Theme for Cavalier Robotics
+Version: 1
+Author: Cavalier Robotics
+Author URI: http://carobotics.org
+*/
+
+@import "compass";
+@import "compass/reset";
+@import "compass/css3/border-radius";
+@import "compass/css3/box-sizing";
+@import "susy";
+
+/* Colors */
+$primaryColor1: #0C2340; /* Cavalier Blue */
+$primaryColor2: #FF671F; /* Cavalier Orange */
+$primaryColor3: #FFFFFF; /* White */
+$secondaryColor1: #003A70; /* Regal Blue */
+$secondaryColor2: #FFAA4D; /* Pastel Orange */
+$secondaryColor3: #505759; /* Abbey Grey */
+$secondaryColor4: #000000; /* Black */
+
+/* Fonts */
+$primaryFont: 'Open Sans', sans-serif;
+$secondaryFont: 'Dosis', sans-serif; /* using 500 semi-bold */
+$monospaceFont: 'Droid Sans Mono', ;
+
+/* Susy */
+@include layout(12 1/4);
+
+body {
+  @include container(80em);
+}
+
+* {
+  @include box-sizing(border-box); //compass
+}
+
+/* Body and Centered Container */
+html, body {
+  background: $primaryColor1;
+  
+  /* Default typography */
+  color: $primaryColor3;
+  font-family: $primaryFont;
+  line-height: 1.25;
+
+  a, a:visited {
+    color: $primaryColor2;
+  }
+
+  a:hover {
+    color: $secondaryColor2;
+  }
+}
+
+
+/* Header and Navigation Bar */
+.header {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  max-width: 2000px;
+  height: auto;
+  text-align: center;
+
+  #Cover {
+    width: 90%;
+    margin: 10px;
+  }
+}
+
+.navbar {
+  background: $primaryColor2;
+  width: 100%;
+  display: inline-block;
+  height: 50px;
+
+  ul {
+    width: 100%;
+  }
+ 
+  /* DO NOT USE MORE THAN 6 LIST ITEMS WITHOUT EXPANDING THIS LOOP */
+  @for $i from 1 through 6 {
+    li:first-child:nth-last-child(#{$i}),
+    li:first-child:nth-last-child(#{$i}) ~ li {
+      width: #{100%/$i};
+    }
+  } 
+
+  li {
+     float: left;
+     text-align: center;
+     padding: 10px;
+     @include box-sizing(border-box); //Compass
+        
+    a, p {
+      color: $primaryColor3;
+      text-decoration: none;
+      font-family: $secondaryFont;
+      font-size: 1.7em;
+    }
+   
+    a:hover, p:hover {
+      color: $primaryColor1;
+    }
+  }
+}
+
+#calendar {
+  width: 100%;
+  text-align: center;
+  padding: 20px;
+
+  h1 {
+    color: $primaryColor2;
+    font-family: $secondaryFont;
+    font-size: 1.7em;
+    padding: 10px;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    display: inline-block;
+  }
+}
+
+/* Discussion */
+#discussion {
+  @include span(first 6);
+
+  h1 {
+    text-align: center;
+    color: $primaryColor2;
+    font-family: $secondaryFont;
+    font-size: 1.7em;
+    padding: 10px;
+  }
+
+  .post {
+    margin: 1em 0;
+    background: $secondaryColor3;
+    padding: 10px;
+  }
+
+  .meta {
+    font-size: 0.75em;
+    line-height: 1;
+    margin-bottom: 1.5em;
+
+    p {
+      margin-right: 0.75em;
+      margin-top: 0;
+      float: left;
+    }
+
+    p:last-of-type {
+      float: none;
+    }
+
+    p.date:before, p.comments:before, p.lastcomment:before {
+      font-family: "dashicons";
+    }
+
+    p.date:before {
+      content: "\f508" + " ";
+    }
+
+    p.comments:before {
+      content: "\f125" + " ";
+    }
+
+    p.lastcomment:before {
+      content: "\f469" + " ";
+    }
+  }
+
+  p {
+    margin: 1em 0;
+  }
+
+  h2 {
+    margin-top: 0.5em;
+    padding: 0;
+    color: $primaryColor2;
+    font-family: $secondaryFont;
+    font-size: 1.7em;
+    
+    a {
+      text-decoration: none;
+      color: $primaryColor2;
+    }
+    .underline {
+        text-decoration: underline;
+    }
+  }
+
+  h2:first-of-type {
+    margin-top: 10px;
+  }
+}
+
+/* Footer */
+.footer {
+  @include span(12);
+
+  text-align: center;
+  width: 100%;
+  margin: 3em;
+
+  #Logo {
+    max-width: 200px;
+  }
+}
+
+/* Misc */
+.floatR {
+  float:right;
+}
+
+.rounded {
+  @include border-radius(1em 1em 1em 1em, 1em 1em 1em 1em); //compass
+}
+
+.aligncenter {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.alignleft {
+  float: left;
+}
+
+.alignright {
+  float: right;
+}
+
+.overflowauto {
+  overflow: auto;
+}
+
+.comments {
+  li {
+    clear: both;
+
+    #meta {
+      display: block;
+
+      p {
+        margin-top: 10px;
+        margin-bottom: 0;
+        width: auto;
+      }
+
+      #author {
+        float: left;
+        color: $primaryColor2;
+      }
+
+      #time {
+        float: right;
+      }
+    }
+
+    p {
+      float: right;
+      width: 90%;
+    }
+  }
+
+  .avatar {
+    float: left;
+    padding: 10px 10px 10px 0;
+  }
+
+  #respond {
+    clear: both;
+    text-align: center;
+
+    textarea {
+      font-family: $primaryFont;
+    }
+
+    .commentsubmit {
+      margin: 0 auto;
+      margin-top: 0.5em;
+      display: block;
+      background: $primaryColor2;
+      border-color: $secondaryColor2;
+      border-style: solid;
+      border-width: 1px;
+      color: #fff;
+      font-family: $primaryFont;
+      height: 30px;
+      box-shadow: 0 1px 0 rgba(120, 200, 230, 0.5) inset, 0 1px 0 rgba(0, 0, 0, 0.15);
+      @include border-radius(3px 3px 3px 3px, 3px 3px 3px 3px); //compass
+    }
+  }
+
+  #commentbreak {
+    margin: 0 auto;
+    clear: both;
+    width: 85%;
+    height: 5px;
+    background: -webkit-linear-gradient($primaryColor1, $secondaryColor1, $primaryColor1); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient($primaryColor1, $secondaryColor1, $primaryColor1); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient($primaryColor1, $secondaryColor1, $primaryColor1); /* For Firefox 3.6 to 15 */
+    background: linear-gradient($primaryColor1, $secondaryColor1, $primaryColor1); /* Standard syntax */
+    background-attachment:fixed;
+    @include border-radius(1em 1em 1em 1em, 1em 1em 1em 1em); //compass
+  }
+}
+
+#fundraising, #outreach {
+  @include span(last 6 narrow);
+  display: inline-block;
+
+  text-align: center;
+
+  h1 {
+    text-align: center;
+    color: $primaryColor2;
+    font-family: $secondaryFont;
+    font-size: 1.7em;
+    padding: 10px;
+  }
+
+
+  .post {
+    text-align: left;
+    margin: 1em 0;
+    background: $secondaryColor3;
+    padding: 10px;
+  }
+
+  h2 {
+    text-align: center;
+  }
+
+  .meta {
+    font-size: 0.75em;
+    line-height: 1;
+    margin-bottom: 1.5em;
+
+    p {
+      margin-right: 0.75em;
+      margin-top: 0;
+      float: left;
+    }
+
+    p:last-of-type {
+      float: none;
+    }
+
+    p.date:before, p.comments:before, p.lastcomment:before {
+      font-family: "dashicons";
+    }
+
+    p.date:before {
+      content: "\f508" + " ";
+    }
+
+    p.comments:before {
+      content: "\f125" + " ";
+    }
+
+    p.lastcomment:before {
+      content: "\f469" + " ";
+    }
+  }
+
+  p {
+    margin: 1em 0;
+  }
+
+  h2 {
+    margin-top: 0.5em;
+    padding: 0;
+    color: $primaryColor2;
+    font-family: $secondaryFont;
+    font-size: 1.7em;
+    
+    a {
+      text-decoration: none;
+      color: $primaryColor2;
+    }
+    .underline {
+        text-decoration: underline;
+    }
+  }
+
+  h2:first-of-type {
+    margin-top: 10px;
+  }
+}
+
+#outreachHours {
+  tr:first-of-type {
+      border-bottom: 1px solid $primaryColor2;
+  }
+
+  td {
+    padding: 0 0.5em;
+  }
+
+  .column {
+    @include span(first 6 narrow);
+    margin-top: 0;
+    padding: 10px;
+    background: $secondaryColor3;
+  }
+  .column:last-of-type {
+    @include span(last 6 narrow);
+  }
+}
