@@ -2,6 +2,10 @@
 
       <!--Slider-->
       <div class="slider">
+        <div class="buttons">
+          <a id="prev" href="javascript:void(0)"><img src="<?php bloginfo('template_url'); ?>/images/arrow2.png" /></a>
+          <a id="next" href="javascript:void(0)"><img src="<?php bloginfo('template_url'); ?>/images/arrow.png" /></a>
+        </div>
         <div class="slide active-slide">
           <img id="slide1" src="<?php bloginfo('template_url'); ?>/images/1.JPG" /> 
         </div>
@@ -30,10 +34,23 @@
                <p>Reach out to Team 619 through email or social media!</p>
              </div>
            </a></div>
-           <div class="column" id="center"><a href="http://www.amazon.com/b//ref=as_sl_pc_tf_lc?node=2238192011&tag=charloalbemar-20&camp=217361&creative=401093&linkCode=ur1&adid=0GCRTZ7BKA999JWVJT7G&&ref-refURL=http%3A%2F%2Frcm-na.amazon-adsystem.com%2Fe%2Fcm%3Ft%3Dcharloalbemar-20%26o%3D1%26p%3D12%26l%3Dur1%26category%3Dgiftcardsnonamazon%26banner%3D12FF4M1CP3H5WZMCHC82%26f%3Difr%26linkID%3DF5DIF4R3WOZHKECF" target="_blank">
-<div class="columnimage">
-<iframe src="http://rcm-na.amazon-adsystem.com/e/cm?t=charloalbemar-20&o=1&p=12&l=ur1&category=giftcardsnonamazon&banner=12FF4M1CP3H5WZMCHC82&f=ifr&linkID=F5DIF4R3WOZHKECF" width="300" height="250" scrolling="no" border="0" marginwidth="0" style="border:none;" frameborder="0"></iframe>
-</div>
+           <div class="column" id="center">
+             <div class="columnimage">
+<script type='text/javascript'>
+ amzn_assoc_ad_type = 'banner';
+ amzn_assoc_tracking_id = 'charloalbemar-20';
+ amzn_assoc_marketplace = 'amazon';
+ amzn_assoc_region = 'US';
+ amzn_assoc_placement = 'assoc_banner_placement_default';
+ amzn_assoc_linkid = 'TTGYQMLWKGHQDMFX';
+ amzn_assoc_campaigns = 'amazonhomepage';
+ amzn_assoc_p = '9';
+ amzn_assoc_banner_type = 'rotating';
+ amzn_assoc_width = '180';
+ amzn_assoc_height = '150';
+</script>
+<script src='//z-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&Operation=GetScript&ID=OneJS&WS=1'></script>
+             </div>
              <div class="columntext">
                <h1>Amazon</h1>
                <p>Support us by clicking on the link before placing an order on Amazon</p>

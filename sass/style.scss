@@ -170,6 +170,42 @@ html, body {
   .active-slide {
     display: block;
   }
+
+  #next {
+    right: 0;
+    margin-right: 10px;
+    height: 100%;
+    position: absolute;
+    background: none;
+    z-index: 999;
+    
+    img {
+      height: 90%;
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%);
+      opacity: 0.6;
+      filter: alpha(opacity=60); /* For IE8 and earlier */
+    }
+  }
+  #prev {
+    height: 100%;
+    position: absolute;
+    background: none;
+    z-index: 999;
+
+    left: 0;
+    margin-left: 10px;
+
+    img {
+      height: 90%;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      opacity: 0.6;
+      filter: alpha(opacity=60); /* For IE8 and earlier */
+    }
+  }
 }
 
 /* Team Summary */
@@ -237,16 +273,16 @@ html, body {
   .column#center {
     width: 30%;
     display: inline-block;
-  
-    iframe {
-      width: 100%;
-      text-align: center;
-      background: $primaryColor3;
-      height: 270px;
-    }
-    
-    p {
-      text-decoration: underline;
+    position: relative;
+
+    #amzn_assoc_ad_div_assoc_banner_placement_default_0 {
+      width: 180px;
+      height: 150px;
+      padding: 0px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin: -100px 0 0 -90px;
     }
   }
   
